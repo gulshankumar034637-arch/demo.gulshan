@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2a1c0a"><meta name="description" content="Wedding invitation for Satish and Geeta">
+<title>Satish &amp; Geeta — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<div class="cardstage" id="cardStage" aria-label="Wedding invitation card">
+  <video class="stage-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/royal-courtyard.mp4" type="video/mp4"></video>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="book" id="book">
+    <div class="page" id="scratch">
+      <div class="s-card" id="sCard">
+        <div class="s-scratch">
+          <p class="s-kicker">A little surprise for you</p>
+          <h2 id="sTitle">Scratch the heart</h2>
+          <p class="s-sub" id="sHint">Rub gently with your finger or mouse</p>
+          <div class="s-heart" id="sHeart">
+            <div class="s-under"><b>♥</b><span id="sNames">Satish &amp; Geeta</span><small id="sDate">10 December 2026</small></div>
+            <canvas id="sCanvas" aria-label="Scratch the gold heart to reveal the date"></canvas>
+          </div>
+          <div class="s-bar" aria-hidden="true"><i id="sFill"></i></div>
+          <button class="s-skip" id="sSkip" type="button">Skip scratch · Show the date</button>
+        </div>
+        <div class="s-std" aria-live="polite">
+          <p class="st-script">Save the Date</p>
+          <i class="st-orn" aria-hidden="true">✦ ❋ ✦</i>
+          <p class="st-week" id="stWeek">Thursday</p>
+          <p class="st-day" id="stDay">10</p>
+          <p class="st-month" id="stMonth">December 2026</p>
+          <p class="st-time" id="stTime">7:00 pm onwards</p>
+          <p class="st-names" id="stNames">Satish &amp; Geeta</p>
+          <div class="st-btns"><button class="btn" id="sGo" type="button">View invitation</button><button class="btn ghost" id="calBtn" type="button">Add to calendar</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="cover" id="cover" role="button" tabindex="0" aria-label="Tap to open the invitation card">
+      <div class="face front" id="cvFront">
+        <p class="cv-small">The wedding of</p>
+        <p class="cv-names" id="cvNames">Satish &amp; Geeta</p>
+        <p class="cv-date" id="cvDate">10 December 2026</p>
+        <span class="cv-open">Tap to open</span>
+      </div>
+      <span class="seal" aria-hidden="true">❋</span>
+    </div>
+  </div>
+</div>
+<div class="royal-opening" id="royalOpening" role="dialog" aria-modal="true" aria-label="Open the wedding invitation">
+  <video class="opening-motion-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/burgundy-motion.mp4" type="video/mp4"></video>
+  <div class="opening-sky" aria-hidden="true"><span class="moon"></span><span class="opening-star star-a">✦</span><span class="opening-star star-b">✧</span><span class="opening-star star-c">✦</span></div>
+  <div class="opening-copy"><p class="opening-small">WEDDING INVITATION</p><h1 class="opening-names"><span id="doorGroom">Satish</span><i>&amp;</i><span id="doorBride">Geeta</span></h1><p class="opening-date" id="doorDate">10 December 2026</p></div>
+  <div class="gate-video-wrap" aria-label="Royal Rajasthani palace gate opening">
+    <video id="gateVideo" class="gate-video" preload="metadata" playsinline muted poster="assets/gate-poster-2.jpg">
+      <source src="assets/rajasthani-gate-2.mp4" type="video/mp4">
+    </video>
+    <div class="gate-video-vignette" aria-hidden="true"></div>
+    <div class="gate-video-frame" aria-hidden="true"></div>
+  </div>
+  <button class="opening-button" id="openRoyal" type="button"><span>✦</span> TAP TO OPEN <span>✦</span></button>
+  <div class="opening-petals" aria-hidden="true"><i>✦</i><i>✧</i><i>✦</i><i>❋</i><i>✧</i><i>✦</i><i>❋</i><i>✧</i></div>
+</div>
+
+
+<canvas id="dust" aria-hidden="true"></canvas>
+<button class="music" id="music" type="button" aria-label="Play music"><span id="mIcon">♫</span><span id="mLabel">Play music</span></button>
+<audio id="song" loop preload="metadata"><source src="assets/wedding-song.mp3" type="audio/mpeg"></audio>
+
+<main>
+
+<section class="hero" id="hero"><video class="courtyard-bg" muted loop playsinline preload="none" aria-hidden="true"><source src="assets/royal-courtyard.mp4" type="video/mp4"></video>
+  <canvas id="petals" class="petal-cv" aria-hidden="true"></canvas>
+  <p class="kicker" id="kick">Together with their families</p>
+  <div class="stage">
+    <div class="hero-arch" aria-hidden="true"><img src="assets/chhatri.jpg" alt=""></div>
+    <div class="pair" id="pair">
+      
+      <figure class="pc left"><img id="pGroom" alt="Groom" src="assets/photo1.jpg"></figure>
+      <figure class="pc right"><img id="pBride" alt="Bride" src="assets/photo2.jpg"></figure>
+    </div>
+  </div>
+  <h1><span id="gName">Satish</span><em>&amp;</em><span id="bName">Geeta</span></h1>
+  <p class="tag" id="tag">Two hearts, one beautiful journey</p>
+  <p class="hero-date" id="dLabel">10 December 2026</p>
+  <i class="hero-orn" aria-hidden="true">✦ ❋ ✦</i><p class="hero-venue" id="heroVenue">The Royal Palace, Jaipur</p>
+  <a class="btn" href="#events">View celebrations</a><span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<section class="sec welcome rv"><p class="script">With love and blessings</p><h2 id="wTitle">A new chapter begins</h2><p class="copy" id="wText">Two hearts, two families and one beautiful celebration. Your presence will make our special day even more memorable, and we would be honoured to celebrate it with you.</p></section>
+
+<section class="sec dark count rv"><h2>Until we say “I do”</h2>
+<div class="cd"><div><strong id="days">00</strong><span>Days</span></div><div><strong id="hours">00</strong><span>Hours</span></div><div><strong id="minutes">00</strong><span>Minutes</span></div><div><strong id="seconds">00</strong><span>Seconds</span></div></div></section>
+
+<section class="sec rv" id="events"><h2>Wedding events</h2><div id="evGrid" class="ev-grid"></div></section>
+
+<section class="sec tint rv"><h2>The venue</h2>
+<div class="venue tilt"><div class="pin">⌖</div><h3 id="vName">The Royal Palace, Jaipur</h3><p id="vAddr">Demo Road, Near City Palace, Jaipur, Rajasthan 302001</p><a id="map" class="btn ghost" href="https://maps.google.com/?q=Jaipur+City+Palace" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></div></section>
+
+<section class="sec rv"><h2>Our memories</h2><div id="gal" class="gal"></div></section>
+
+<section class="sec dark close rv"><canvas class="petal-cv" data-d=".6" aria-hidden="true"></canvas><p class="script">Your presence is our present</p><h2 id="cTitle">Celebrate with us</h2><p class="copy" id="cText">We look forward to sharing laughter, blessings and beautiful memories with you.</p><button class="btn" id="share" type="button">Share invitation</button><p class="sign">With love<strong>Satish &amp; Geeta</strong></p></section>
+</main>
+<footer>Made with love · Satish &amp; Geeta</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script><script src="script.js"></script>
+</body></html>
